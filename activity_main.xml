@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- Top Banner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/banner_background"
+            android:padding="16dp">
+
+            <!-- Profile Picture -->
+            <ImageView
+                android:id="@+id/profilePic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/profile_pic"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_background"
+                android:padding="2dp" />
+
+            <!-- Filter Icon -->
+            <ImageView
+                android:id="@+id/filterIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_filter_list"
+                android:contentDescription="Filter"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="420dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:src="@drawable/skilledgrove_logo" />
+
+            <!-- Welcome Text -->
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="Welcome!"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomeText"
+                android:layout_centerHorizontal="true"
+                android:text="Find your Dream Freelancer"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subtitle"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:background="@drawable/search_background"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_search" />
+
+                <EditText
+                    android:id="@+id/searchEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:hint="Type of Work..."
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="#888888"
+                    android:padding="10dp" />
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:text="Search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="@android:color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Freelancer Card #1 -->
+        <include layout="@layout/freelancer2_card" />
+
+        <!-- Freelancer Card #2 -->
+        <include layout="@layout/freelancer_card" />
+
+        <!-- Freelancer Card #3 -->
+        <include layout="@layout/freelancer3_card" />
+
+    </LinearLayout>
+</ScrollView>
